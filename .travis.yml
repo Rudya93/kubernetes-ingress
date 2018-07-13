@@ -17,5 +17,5 @@ before_install:
 - echo "Repo Slug:${TRAVIS_PULL_REQUEST_SLUG}"
 - wget https://github.com/fossas/fossa-cli/releases/download/v0.7.0-beta.1/fossa-cli_0.7.0-beta.1_linux_amd64.tar.gz && tar xzf fossa-cli_0.7.0-beta.1_linux_amd64.tar.gz
 - ./fossa update || true
-- ./fossa init
+- ./fossa init -p kubernetes-ingress
 - FOSSA_API_KEY=${fossa} ./fossa analyze -p kubernetes-ingress
