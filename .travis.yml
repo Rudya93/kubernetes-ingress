@@ -18,4 +18,4 @@ before_install:
 - wget https://github.com/fossas/fossa-cli/releases/download/v0.7.0-beta.1/fossa-cli_0.7.0-beta.1_linux_amd64.tar.gz && tar xzf fossa-cli_0.7.0-beta.1_linux_amd64.tar.gz
 - ./fossa update || true
 - ./fossa init 
-- FOSSA_API_KEY=${fossa} ./fossa -p kubernetes-ingress analyze
+- FOSSA_API_KEY=${fossa} ./fossa analyze -p kubernetes-ingress
